@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/libs/bootstrap-datetimepicker.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Mockup challenge</title>
+  </head>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <body>
+    <div class="container-fluid h-100">
+      <div class="row h-100">
+        <div class="col-sm-2 p-0 h-100">
+          <div class="d-flex flex-column side-nav h-100 m-0">
+            <div>
+              <a class="navbar-brand w-100" href="#">
+                <img class="logo" src="./assets/logo.png" alt="log0" />
+              </a>
+            </div>
+            <div class="nav-items">
+              <ul class="list-group">
+                <li class="list-group-item border-0"><a href="#">
+                  <i class="fa fa-home p-3 ml-5"></i></i>Dashboard</a>
+                </li>
+                <li class="list-group-item border-0"><a href="#">
+                  <i class="fa fa-envelope p-3 ml-5"></i>SMS</a>
+                </li>
+                <li class="list-group-item border-0"><a href="#">
+                  <i class="fa fa-comments p-3 ml-5"></i></i>WhatsApp</a>
+                </li>
+                <li class="list-group-item border-0"><a href="#">
+                  <i class="fa fa-users p-3 ml-5"></i></i>Contacts</a>
+                </li>
+                <li class="list-group-item border-0"><a href="#">
+                  <i class="fa fa-briefcase p-3 ml-5"></i></i>VAS</a>
+                </li>
+                <li class="list-group-item border-0"><a href="#">
+                  <i class="fa fa-user-circle p-3 ml-5"></i></i>Self Care</a>
+                </li>
+                <li class="list-group-item border-0"><a href="#">
+                  <i class="fa fa-phone-square p-3 ml-5"></i></i>Voice</a>
+                </li>
+                <li class="list-group-item border-0"><a href="#">
+                  <i class="fa fa-comments p-3 ml-5"></i></i>Chart</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-10 p-0 h-100">
+          <div class="content-container h-100">
+            <div class="header header-1">
+              <nav>
+                <div class="ml-auto d-flex">
+                  <div class="notifications">
+                    <img
+                      src="./assets/mail.svg"
+                      alt="Notification"
+                      class="notification-image"
+                    />
+                  </div>
+                  <div class="profile d-flex">
+                    <img
+                      src="./assets/profile.jpg"
+                      alt="Profile"
+                      class="profile-image mr-2"
+                    />
+                    <div class="profile-text mr-2 ">Username</div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <div class="card title-card">
+              <h6 class="title-message pl-4 pt-3">
+                Create SMS Message
+              </h6>
+            </div>
+            <div class="d-flex tabs-card ml-0 pt-3">
+              <div id="tab1" onClick="JavaScript:selectTab(1);">
+                SEND BULK SMS
+              </div>
+              <div id="tab2" onClick="JavaScript:selectTab(2);">
+                SEND SINGLE SMS
+              </div>
+            </div>
+            <div class="content row d-flex m-3">
+              <div id="tab1Content">
+                <div class="tab1-sms mr-4">
+                  <div class="sms-title pt-3">
+                    <p><b>Send Bulk SMS</b></p>
+                    <p class="sms-text pr-3">
+                      Send your message to multiple contacts in one go
+                    </p>
+                  </div>
+                  <div class="contact-list-form d-flex mb-4">
+                    <div class="contacts-form w-50 pl-4">
+                      <div class="form-group">
+                        <label for="exampleFormControlSelect1"
+                          >Sender's Name</label
+                        >
+                        <select
+                          class="form-control form-control-sm"
+                          id="exampleFormControlSelect1"
+                        >
+                          <option>Select Name</option>
+                          <option>name1</option>
+                          <option>name2</option>
+                          <option>name3</option>
+                          <option>name4</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleFormControlSelect1"
+                          >Select existing</label
+                        >
+                        <select
+                          class="form-control form-control-sm"
+                          id="exampleFormControlSelect1"
+                        >
+                          <option>email1@exmple.com</option>
+                          <option>email2@exmple.com</option>
+                          <option>email3@exmple.com</option>
+                          <option>email4@exmple.com</option>
+                        </select>
+                      </div>
+                      <p><span>or</span></p>
+                      <button class="btn">
+                        <i class="fa fa-bars"></i> Create New List
+                      </button>
+                    </div>
+                    <div class="file-upload w-50 m-3 ">
+                      <div class="h-75">
+                        <input type="file" id="uploadfiles" multiple="multiple" />
+                      </div>
+                      <div class="upload-error p-2">
+                        <p class="file-name">FileName.csv</p>
+                        <p class="file-size">350 kb</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="message-form">
+                    <div class="form-group m-4">
+                      <textarea
+                        class="form-control ml-2"
+                        placeholder="Write your message here..."
+                        rows="5"
+                        id="comment"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="set-schedule pl-3 pt-1">
+                    <div class="form-check mb-3 ml-3">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="defaultCheck1"
+                      />
+                      <label class="form-check-label" for="defaultCheck1">
+                        Schedule for later
+                      </label>
+                    </div>
+                    <div class="col-sm-6"">
+                      <div class="form-group">
+                        <label for="exampleFormControlSelect1"
+                          >Select time and date</label
+                        >
+                        <select
+                          class="form-control form-control-sm"
+                          id="exampleFormControlSelect1"
+                        >
+                          <option>Not implemented</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="send-msg mr-4">
+                        <button type="button" class="btn send-msg-btn justify-content-end">Send Message</button>
+                  </div>
+                </div>
+                <div class="tab1-outbox">
+                  <div class="outbox-title pt-3">
+                    <p><b>Bulk SMS Outbox</b></p>
+                    <p class="outbox-text">
+                      <span>3</span>
+                    </p>
+                  </div>
+                  <div class="outbox-search ">
+                    <div class="form-group has-search">
+                      <span class="fa fa-search form-control-feedback pt-3 mr-3"></span>
+                      <input type="text" class="form-control ml-4" placeholder="Search">
+                    </div>
+                    <div class=" has-search mr-3">
+                      <select
+                        class="form-control"
+                        id="exampleFormControlSelect1"
+                      >
+                        <option>Last 7 days</option>
+                        <option>Last month</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="outbox-message p-3">
+                    <div class="pt-3 d-flex">
+                      <p><b>Emalify</b></p>
+                      <p class="spread">
+                        <span>....</span>
+                      </p>
+                    </div>
+                    <div class="d-flex msg-extra">
+                      <p>Contact list 5</p>
+                      <p class="spread">
+                        <span>Sent</span>
+                      </p>
+                    </div>
+                    <p class="message">
+                      We are serving the files under the /build directory and serving nothing else. You can follow any of the original versions if you need.
+                    </p>
+                    <div class="align-items-end">
+                      <p>Wed 26 - 08:43 PM</p>
+                    </div>
+                  </div>
+                  <div class="outbox-message-scheduled p-3">
+                    <div class="pt-3 d-flex">
+                      <p><b>Emalify</b></p>
+                      <p class="spread">
+                        <span>....</span>
+                      </p>
+                    </div>
+                    <div class="d-flex msg-extra">
+                      <p>Contact list 5</p>
+                      <p class="spread">
+                        <span>Scheduled</span>
+                      </p>
+                    </div>
+                    <p class="message">
+                      We are serving the files under the /build directory and serving nothing else. You can follow any of the original versions if you need.
+                    </p>
+                    <div class="align-items-end">
+                      <p>Wed 26 - 08:43 PM</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="tab2Content">
+                Welcome to tab 2!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function selectTab(tabIndex) {
+      //Hide All Tabs
+      document.getElementById('tab1Content').style.display = 'none';
+      document.getElementById('tab2Content').style.display = 'none';
+
+      //Show the Selected Tab
+      document.getElementById('tab' + tabIndex + 'Content').style.display =
+        'flex';
+    }
+    var uploadfiles = document.querySelector('#uploadfiles');
+    uploadfiles.addEventListener('change', function () {
+    var files = this.files;
+    for(var i=0; i<files.length; i++){
+        uploadFile(this.files[i]); // call the function to upload the file
+    }
+}, false)
+  </script>
+</html>
